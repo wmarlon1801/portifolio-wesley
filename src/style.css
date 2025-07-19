@@ -1062,33 +1062,19 @@ section {
   z-index: 2;
 }
 
-.experience-item {
-  display: flex;
-  margin-bottom: 3rem;
-  position: relative;
-}
+  .experience-item {
+    display: block;
+    margin-bottom: 2rem;
+    position: relative;
+  }
 
-.experience-marker {
-  width: 20px;
-  height: 20px;
-  background: var(--primary-color);
-  border-radius: 50%;
-  margin-right: 2rem;
-  margin-top: 0.5rem;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
-}
+  .experience-marker {
+    display: none;
+  }
 
-.experience-item::before {
-  content: '';
-  position: absolute;
-  left: 10px;
-  top: 40px;
-  width: 2px;
-  height: calc(100% + 1rem);
-  background: linear-gradient(to bottom, var(--primary-color), transparent);
-}
+  .experience-item::before {
+    display: none;
+  }
 
 .experience-item:last-child::before {
   display: none;
@@ -1103,10 +1089,11 @@ section {
   transition: var(--transition);
 }
 
-.experience-content:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
+  .experience-content:hover {
+    box-shadow: 0 12px 35px rgba(37, 99, 235, 0.15);
+    transform: translateY(-3px);
+    border-color: rgba(37, 99, 235, 0.2);
+  }
 
 .experience-content h3 {
   color: var(--primary-color);
@@ -1135,11 +1122,12 @@ section {
   line-height: 1.6;
 }
 
-.experience-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
+  .experience-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+  }
 
 /* Seção Projetos */
 .projects-grid {
@@ -1445,6 +1433,18 @@ section {
 
 /* Responsividade */
 @media (max-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  .section-title {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+  }
   .nav-menu {
     position: fixed;
     top: 100%;
@@ -1506,19 +1506,78 @@ section {
 
   .experience-item {
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 2rem;
+    position: relative;
   }
 
   .experience-marker {
     margin-right: 0;
     margin-bottom: 1rem;
-    align-self: center;
+    align-self: flex-start;
+    width: 16px;
+    height: 16px;
+    margin-left: 1rem;
   }
 
   .experience-item::before {
-    left: 50%;
-    top: 30px;
-    height: calc(100% + 2rem);
-    transform: translateX(-50%);
+    left: 1.5rem;
+    top: 25px;
+    height: calc(100% + 1.5rem);
+    transform: none;
+  }
+
+  .experience-content {
+    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .experience-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+  }
+
+  .experience-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+
+  .experience-period {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    background: rgba(37, 99, 235, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+  }
+
+  .experience-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+  }
+
+  .experience-tech {
+    justify-content: flex-start;
+    gap: 0.4rem;
+  }
+
+  .experience-tech span {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
   }
 
   .section-title {
@@ -1603,6 +1662,24 @@ section {
     font-size: 2rem;
   }
 
+  .experience-item {
+    margin-bottom: 2.5rem;
+  }
+
+  .experience-content {
+    padding: 2rem;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+  }
+
+  .experience-marker {
+    display: none;
+  }
+
+  .experience-item::before {
+    display: none;
+  }
+
   .hero-subtitle {
     font-size: 1.25rem;
   }
@@ -1631,6 +1708,95 @@ section {
   }
   
   .metric-label {
+    font-size: 0.9rem;
+  }
+
+  /* Melhorias específicas para mobile muito pequeno */
+  .experience-item {
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-content {
+    padding: 1rem;
+  }
+
+  .experience-content h3 {
+    font-size: 1rem;
+  }
+
+  .experience-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .experience-tech {
+    gap: 0.3rem;
+    justify-content: flex-start;
+  }
+
+  .experience-tech span {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    margin-bottom: 1rem;
+  }
+
+  .project-content {
+    padding: 1rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+  }
+
+  .tech-tag {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+
+  .education-item,
+  .certification-item {
+    padding: 1rem;
+  }
+
+  .education-content h4,
+  .certification-content h4 {
+    font-size: 1rem;
+  }
+
+  .education-description,
+  .certification-description {
+    font-size: 0.85rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-form h3 {
+    font-size: 1.3rem;
+  }
+
+  .form-input,
+  .form-textarea {
     font-size: 0.9rem;
   }
 }

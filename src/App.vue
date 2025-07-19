@@ -1245,6 +1245,12 @@ export default {
       if (element) {
         element.scrollIntoView({ behavior: 'smooth' })
       }
+      
+      // Fechar menu mobile após clicar
+      const navMenu = document.querySelector('.nav-menu')
+      if (navMenu && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active')
+      }
     }
 
     const downloadCV = () => {
