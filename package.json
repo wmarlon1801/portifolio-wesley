@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.0",
+    "terser": "^5.43.1",
     "vite": "^4.3.0"
   },
   "keywords": [
@@ -24,4 +25,4 @@
   ],
   "author": "Wesley Santos",
   "license": "MIT"
-} 
+}
