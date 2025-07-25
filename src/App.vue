@@ -77,7 +77,7 @@
               <i class="fas fa-code"></i>
             </div>
             <div class="metric-content">
-              <h3 class="metric-number">3+</h3>
+              <h3 class="metric-number">4+</h3>
               <p class="metric-label">{{ t('metrics.yearsExperience') }}</p>
             </div>
           </div>
@@ -853,6 +853,8 @@ export default {
       { name: 'TypeScript', level: 80 },
       { name: 'JavaScript', level: 85 },
       { name: 'Azure DevOps', level: 70 },
+      { name: 'AWS', level: 70 },
+      { name: 'Ruby on Rails', level: 40 },
       { name: 'SignalR', level: 75 },
       { name: 'JWT', level: 80 },
       { name: 'Git', level: 85 },
@@ -977,6 +979,26 @@ export default {
           pt: 'Curso completo de testes automatizados e qualidade de software com 5 horas de conteúdo.',
           en: 'Complete automated testing and software quality course with 5 hours of content.',
           es: 'Curso completo de pruebas automatizadas y calidad de software con 5 horas de contenido.'
+        }
+      },
+      {
+        id: 6,
+        title: {
+          pt: 'Aprenda a Criar Servidores Virtuais com EC2 na Amazon AWS',
+          en: 'Learn to Create Virtual Servers with EC2 on Amazon AWS',
+          es: 'Aprende a Crear Servidores Virtuales con EC2 en Amazon AWS'
+        },
+        issuer: {
+          pt: 'Udemy',
+          en: 'Udemy',
+          es: 'Udemy'
+        },
+        date: 'Julho 2025',
+        icon: 'fab fa-udemy',
+        description: {
+          pt: 'Curso prático sobre criação e gerenciamento de servidores EC2 na AWS, abordando conceitos essenciais de cloud e infraestrutura como serviço.',
+          en: 'Practical course on creating and managing EC2 servers on AWS, covering essential cloud and infrastructure as a service concepts.',
+          es: 'Curso práctico sobre la creación y gestión de servidores EC2 en AWS, cubriendo conceptos esenciales de cloud e infraestructura como servicio.'
         }
       },
     ])
